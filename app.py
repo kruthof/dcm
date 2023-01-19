@@ -23,8 +23,8 @@ if submit:
     score = result['score']
 if label == 'POSITIVE':
         st.success(f'{label} sentiment (score: {score})')
-        st.image('images/happy.jpg', caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+        st.image('images/happy.png', caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 else:
     st.error(f'{label} sentiment (score: {score})')
-    st.image('images/sad.png', caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image('images/angry.png', caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
