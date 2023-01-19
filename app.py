@@ -1,8 +1,10 @@
 import streamlit as st
 from transformers import pipeline
 
-st.title('Sentiment Analyser App')
-st.write('Welcome to my sentiment analysis app!')
+
+st.image('images/hslu.png', caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+st.title('Customer Feedback')
+st.write('HSLU Course Digital Customer Management')
 
 form = st.form(key='sentiment-form')
 user_input = form.text_area('Enter your text')
@@ -21,5 +23,8 @@ if submit:
     score = result['score']
 if label == 'POSITIVE':
         st.success(f'{label} sentiment (score: {score})')
+        st.image('images/happy.jpg', caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+
 else:
     st.error(f'{label} sentiment (score: {score})')
+    st.image('images/sad.png', caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
